@@ -523,6 +523,19 @@
         "no-case": true
       }
     },
+    "dotenv": {
+      "builtin": {
+        "fs.readFileSync": true,
+        "os.homedir": true,
+        "path.join": true,
+        "path.resolve": true
+      },
+      "globals": {
+        "console.log": true,
+        "process.cwd": true,
+        "process.env": true
+      }
+    },
     "duplexer3": {
       "builtin": {
         "stream.Duplex.call": true,
