@@ -1,6 +1,6 @@
 require("dotenv").config();
 const { forArtifact } = require("@truffle/decoder");
-const Web3  = require("web3");
+const Web3HttpProvider = require('web3-providers-http');
 const artifactJSON = require("./MetaCoin.json");
 
 const transaction = {
@@ -17,7 +17,7 @@ const runDecoder = async () => {
       projectInfo: {
         artifacts: [ artifactJSON ]
       },
-      provider: new Web3.providers.HttpProvider(`https://ropsten.infura.io/v3/${process.env.infuraKey}`)
+      provider: new Web3HttpProvider(`https://ropsten.infura.io/v3/${process.env.infuraKey}`)
     }
   );
 
