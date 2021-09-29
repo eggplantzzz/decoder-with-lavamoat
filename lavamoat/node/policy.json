@@ -200,7 +200,8 @@
         "@truffle/source-map-utils": true,
         "bn.js": true,
         "debug": true,
-        "web3": true
+        "web3-eth": true,
+        "web3-utils": true
       }
     },
     "@truffle/source-map-utils": {
@@ -235,26 +236,6 @@
       "globals": {
         "crypto": true,
         "define": true
-      }
-    },
-    "bluebird": {
-      "builtin": {
-        "async_hooks.AsyncResource": true
-      },
-      "globals": {
-        "CustomEvent": true,
-        "Event": true,
-        "MutationObserver": true,
-        "clearTimeout": true,
-        "console": true,
-        "cordova": true,
-        "document.createElement": true,
-        "document.createEvent": true,
-        "document.documentElement": true,
-        "navigator": true,
-        "process": true,
-        "setImmediate": true,
-        "setTimeout": true
       }
     },
     "bn.js": {
@@ -315,12 +296,6 @@
         "crypto.createVerify": true
       }
     },
-    "buffer-to-arraybuffer": {
-      "globals": {
-        "Buffer": true,
-        "define": true
-      }
-    },
     "bufferutil": {
       "globals": {
         "__dirname": true
@@ -377,15 +352,6 @@
         "title-case": true,
         "upper-case": true,
         "upper-case-first": true
-      }
-    },
-    "chownr": {
-      "builtin": {
-        "fs": true,
-        "path.resolve": true
-      },
-      "globals": {
-        "process.version": true
       }
     },
     "cids": {
@@ -500,15 +466,6 @@
         "supports-color": true
       }
     },
-    "decompress-response": {
-      "builtin": {
-        "stream.PassThrough": true,
-        "zlib.createUnzip": true
-      },
-      "packages": {
-        "mimic-response": true
-      }
-    },
     "diffie-hellman": {
       "builtin": {
         "crypto.DiffieHellman": true,
@@ -534,13 +491,6 @@
         "console.log": true,
         "process.cwd": true,
         "process.env": true
-      }
-    },
-    "duplexer3": {
-      "builtin": {
-        "stream.Duplex.call": true,
-        "stream.Duplex.prototype": true,
-        "stream.Readable": true
       }
     },
     "elliptic": {
@@ -644,57 +594,6 @@
         "pure-rand": true
       }
     },
-    "fs-extra": {
-      "builtin": {
-        "assert": true,
-        "fs.readdir": true,
-        "fs.readdirSync": true,
-        "os.tmpdir": true,
-        "path.basename": true,
-        "path.dirname": true,
-        "path.isAbsolute": true,
-        "path.join": true,
-        "path.normalize": true,
-        "path.relative": true,
-        "path.resolve": true,
-        "path.sep": true
-      },
-      "globals": {
-        "Buffer": true,
-        "console.warn": true,
-        "process.arch": true,
-        "process.cwd": true,
-        "process.platform": true,
-        "process.umask": true,
-        "setTimeout": true
-      },
-      "packages": {
-        "graceful-fs": true,
-        "jsonfile": true,
-        "universalify": true
-      }
-    },
-    "fs-minipass": {
-      "builtin": {
-        "events.EventEmitter": true,
-        "fs.close": true,
-        "fs.closeSync": true,
-        "fs.open": true,
-        "fs.openSync": true,
-        "fs.read": true,
-        "fs.readSync": true,
-        "fs.write": true,
-        "fs.writeSync": true
-      },
-      "globals": {
-        "Buffer": true,
-        "process.binding": true,
-        "process.nextTick": true
-      },
-      "packages": {
-        "minipass": true
-      }
-    },
     "fs.realpath": {
       "builtin": {
         "fs.lstat": true,
@@ -720,24 +619,11 @@
         "process.version": true
       }
     },
-    "get-stream": {
-      "builtin": {
-        "stream.PassThrough": true
-      },
-      "globals": {
-        "Buffer.concat": true
-      }
-    },
     "glob": {
       "builtin": {
         "assert": true,
         "events.EventEmitter": true,
-        "fs.lstat": true,
-        "fs.lstatSync": true,
-        "fs.readdir": true,
-        "fs.readdirSync": true,
-        "fs.stat": true,
-        "fs.statSync": true,
+        "fs": true,
         "path.join": true,
         "path.resolve": true,
         "util": true
@@ -757,65 +643,9 @@
         "path-is-absolute": true
       }
     },
-    "got": {
-      "builtin": {
-        "events": true,
-        "http": true,
-        "https": true,
-        "querystring.stringify": true,
-        "stream.PassThrough": true,
-        "url.format": true,
-        "url.parse": true,
-        "url.resolve": true
-      },
-      "globals": {
-        "clearTimeout": true,
-        "process.versions.electron": true,
-        "setImmediate": true,
-        "setTimeout": true
-      },
-      "packages": {
-        "decompress-response": true,
-        "duplexer3": true,
-        "get-stream": true,
-        "is-plain-obj": true,
-        "is-retry-allowed": true,
-        "is-stream": true,
-        "isurl": true,
-        "lowercase-keys": true,
-        "p-cancelable": true,
-        "p-timeout": true,
-        "safe-buffer": true,
-        "timed-out": true,
-        "url-parse-lax": true,
-        "url-to-options": true
-      }
-    },
-    "graceful-fs": {
-      "builtin": {
-        "assert.equal": true,
-        "constants.O_SYMLINK": true,
-        "constants.O_WRONLY": true,
-        "constants.hasOwnProperty": true,
-        "fs": true,
-        "stream.Stream.call": true,
-        "util": true
-      },
-      "globals": {
-        "clearTimeout": true,
-        "console.error": true,
-        "process": true,
-        "setTimeout": true
-      }
-    },
     "has-flag": {
       "globals": {
         "process.argv": true
-      }
-    },
-    "has-to-string-tag-x": {
-      "packages": {
-        "has-symbol-support-x": true
       }
     },
     "hash-base": {
@@ -876,12 +706,6 @@
         "upper-case": true
       }
     },
-    "isurl": {
-      "packages": {
-        "has-to-string-tag-x": true,
-        "is-object": true
-      }
-    },
     "js-sha3": {
       "globals": {
         "define": true,
@@ -891,17 +715,6 @@
     "json-pointer": {
       "packages": {
         "foreach": true
-      }
-    },
-    "jsonfile": {
-      "builtin": {
-        "fs": true
-      },
-      "globals": {
-        "Buffer.isBuffer": true
-      },
-      "packages": {
-        "graceful-fs": true
       }
     },
     "keccak": {
@@ -934,14 +747,6 @@
         "safe-buffer": true
       }
     },
-    "mime-types": {
-      "builtin": {
-        "path.extname": true
-      },
-      "packages": {
-        "mime-db": true
-      }
-    },
     "minimatch": {
       "builtin": {
         "path": true
@@ -951,100 +756,6 @@
       },
       "packages": {
         "brace-expansion": true
-      }
-    },
-    "minipass": {
-      "builtin": {
-        "events": true,
-        "string_decoder.StringDecoder": true
-      },
-      "globals": {
-        "Buffer": true,
-        "_MP_NO_ITERATOR_SYMBOLS_": true,
-        "process.stderr": true,
-        "process.stdout": true
-      },
-      "packages": {
-        "safe-buffer": true,
-        "yallist": true
-      }
-    },
-    "minizlib": {
-      "builtin": {
-        "assert": true,
-        "buffer.Buffer.alloc": true,
-        "buffer.Buffer.concat": true,
-        "buffer.Buffer.from": true,
-        "zlib": true
-      },
-      "packages": {
-        "minipass": true
-      }
-    },
-    "mkdirp": {
-      "builtin": {
-        "fs": true,
-        "path.dirname": true,
-        "path.parse": true,
-        "path.resolve": true,
-        "util.promisify": true
-      },
-      "globals": {
-        "process.env.__TESTING_MKDIRP_NODE_VERSION__": true,
-        "process.env.__TESTING_MKDIRP_PLATFORM__": true,
-        "process.platform": true,
-        "process.version": true
-      }
-    },
-    "mkdirp-promise": {
-      "packages": {
-        "mkdirp": true
-      }
-    },
-    "mock-fs": {
-      "builtin": {
-        "constants.COPYFILE_EXCL": true,
-        "constants.O_APPEND": true,
-        "constants.O_CREAT": true,
-        "constants.O_EXCL": true,
-        "constants.O_RDONLY": true,
-        "constants.O_RDWR": true,
-        "constants.O_TRUNC": true,
-        "constants.O_WRONLY": true,
-        "constants.S_IFBLK": true,
-        "constants.S_IFCHR": true,
-        "constants.S_IFDIR": true,
-        "constants.S_IFIFO": true,
-        "constants.S_IFLNK": true,
-        "constants.S_IFMT": true,
-        "constants.S_IFREG": true,
-        "constants.S_IFSOCK": true,
-        "constants.UV_DIRENT_BLOCK": true,
-        "constants.UV_DIRENT_CHAR": true,
-        "constants.UV_DIRENT_DIR": true,
-        "constants.UV_DIRENT_FIFO": true,
-        "constants.UV_DIRENT_FILE": true,
-        "constants.UV_DIRENT_LINK": true,
-        "constants.UV_DIRENT_SOCKET": true,
-        "constants.UV_DIRENT_UNKNOWN": true,
-        "fs.createWriteStream": true,
-        "fs.readFileSync": true,
-        "fs.readdirSync": true,
-        "fs.statSync": true,
-        "os.tmpDir": true,
-        "os.tmpdir": true,
-        "path._makeLong": true,
-        "path.basename": true,
-        "path.dirname": true,
-        "path.join": true,
-        "path.resolve": true,
-        "path.sep": true,
-        "path.toNamespacedPath": true,
-        "util.inherits": true
-      },
-      "globals": {
-        "Buffer": true,
-        "process": true
       }
     },
     "multibase": {
@@ -1144,15 +855,6 @@
         "wrappy": true
       }
     },
-    "p-timeout": {
-      "globals": {
-        "clearTimeout": true,
-        "setTimeout": true
-      },
-      "packages": {
-        "p-finally": true
-      }
-    },
     "param-case": {
       "packages": {
         "no-case": true
@@ -1214,13 +916,6 @@
         "parse-asn1": true,
         "randombytes": true,
         "safe-buffer": true
-      }
-    },
-    "query-string": {
-      "packages": {
-        "decode-uri-component": true,
-        "object-assign": true,
-        "strict-uri-encode": true
       }
     },
     "randombytes": {
@@ -1318,27 +1013,6 @@
         "upper-case-first": true
       }
     },
-    "simple-concat": {
-      "globals": {
-        "Buffer.concat": true
-      }
-    },
-    "simple-get": {
-      "builtin": {
-        "http": true,
-        "https": true,
-        "querystring.stringify": true,
-        "url.parse": true
-      },
-      "globals": {
-        "Buffer.byteLength": true
-      },
-      "packages": {
-        "decompress-response": true,
-        "once": true,
-        "simple-concat": true
-      }
-    },
     "snake-case": {
       "packages": {
         "no-case": true
@@ -1375,70 +1049,6 @@
         "upper-case": true
       }
     },
-    "swarm-js": {
-      "builtin": {
-        "assert": true,
-        "child_process": true,
-        "crypto": true,
-        "http.createServer": true,
-        "os": true,
-        "path": true
-      },
-      "globals": {
-        "Buffer": true,
-        "FileReader": true,
-        "clearTimeout": true,
-        "document.createElement": true,
-        "document.createEvent": true,
-        "mimetype.lookup": true,
-        "setTimeout": true
-      },
-      "packages": {
-        "bluebird": true,
-        "eth-lib": true,
-        "fs-extra": true,
-        "got": true,
-        "mime-types": true,
-        "mkdirp-promise": true,
-        "mock-fs": true,
-        "tar": true,
-        "xhr-request": true
-      }
-    },
-    "tar": {
-      "builtin": {
-        "assert": true,
-        "crypto.randomBytes": true,
-        "events": true,
-        "fs": true,
-        "path": true
-      },
-      "globals": {
-        "Buffer": true,
-        "process.cwd": true,
-        "process.env.TESTING_TAR_FAKE_PLATFORM": true,
-        "process.env.USER": true,
-        "process.getgid": true,
-        "process.getuid": true,
-        "process.platform": true,
-        "process.umask": true
-      },
-      "packages": {
-        "chownr": true,
-        "fs-minipass": true,
-        "minipass": true,
-        "minizlib": true,
-        "mkdirp": true,
-        "safe-buffer": true,
-        "yallist": true
-      }
-    },
-    "timed-out": {
-      "globals": {
-        "clearTimeout": true,
-        "setTimeout": true
-      }
-    },
     "title-case": {
       "packages": {
         "no-case": true,
@@ -1458,14 +1068,6 @@
         "upper-case": true
       }
     },
-    "url-parse-lax": {
-      "builtin": {
-        "url.parse": true
-      },
-      "packages": {
-        "prepend-http": true
-      }
-    },
     "utf-8-validate": {
       "globals": {
         "__dirname": true
@@ -1483,26 +1085,6 @@
     "uuid": {
       "builtin": {
         "crypto.randomBytes": true
-      }
-    },
-    "web3": {
-      "packages": {
-        "web3-bzz": true,
-        "web3-core": true,
-        "web3-eth": true,
-        "web3-eth-personal": true,
-        "web3-net": true,
-        "web3-shh": true,
-        "web3-utils": true
-      }
-    },
-    "web3-bzz": {
-      "globals": {
-        "document": true,
-        "ethereum": true
-      },
-      "packages": {
-        "swarm-js": true
       }
     },
     "web3-core": {
@@ -1703,14 +1285,6 @@
         "websocket": true
       }
     },
-    "web3-shh": {
-      "packages": {
-        "web3-core": true,
-        "web3-core-method": true,
-        "web3-core-subscriptions": true,
-        "web3-net": true
-      }
-    },
     "web3-utils": {
       "globals": {
         "Buffer.isBuffer": true,
@@ -1750,16 +1324,6 @@
         "typedarray-to-buffer": true,
         "utf-8-validate": true,
         "yaeti": true
-      }
-    },
-    "xhr-request": {
-      "packages": {
-        "buffer-to-arraybuffer": true,
-        "object-assign": true,
-        "query-string": true,
-        "simple-get": true,
-        "timed-out": true,
-        "url-set-query": true
       }
     },
     "xhr2-cookies": {
